@@ -1,5 +1,8 @@
 package com.softstream.despesa.services;
 
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+//import org.slf4j.LoggerFactoryFriend;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,6 +18,8 @@ public class MesService {
 
 	@Autowired
 	private MesRepository repository;
+	
+//	private static final Logger log = LoggerFactory.getLogger(MesService.class);
 
 	@Transactional(readOnly = true)
 	public Mes findById(Long id) {
