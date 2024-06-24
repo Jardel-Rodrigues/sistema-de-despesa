@@ -17,7 +17,7 @@ public class MesController {
 	@Autowired
 	private MesService service;
 
-	@GetMapping(value = "/buscar-mes/{id}")
+	@GetMapping(value = "/{id}")
 	public ResponseEntity<Mes> findById(@PathVariable Long id) {
 		Mes mes = service.findById(id);
 		return ResponseEntity.ok().body(mes);
