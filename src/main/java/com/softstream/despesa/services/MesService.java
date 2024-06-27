@@ -21,7 +21,7 @@ public class MesService {
 
 	@Transactional(readOnly = true)
 	public Mes findById(Long id) {
-		log.info("ID: " + id);
+		log.info("");
 		return repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Recurso não Encontrado"));
 	}
 	
