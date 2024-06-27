@@ -12,11 +12,12 @@ import com.softstream.despesa.services.exception.ResourceNotFoundException;
 
 @Service
 public class MesService {
+	
+	private Logger log = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private MesRepository repository;
 
-	private Logger log = LoggerFactory.getLogger(this.getClass());
 
 	@Transactional(readOnly = true)
 	public Mes findById(Long id) {
