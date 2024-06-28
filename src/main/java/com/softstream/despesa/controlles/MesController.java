@@ -21,7 +21,7 @@ public class MesController {
 	@Autowired
 	private MesService service;
 
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/{id}", produces = "application/json")
 	public ResponseEntity<Mes> findById(@PathVariable Long id) {
 		Mes mes = service.findById(id);
 		log.info("");
